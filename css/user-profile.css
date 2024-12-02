@@ -1,0 +1,403 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #24292C;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 25px;
+  padding: 5px 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-bar {
+  flex: 1;
+  border: none;
+  background: none;
+  color: #fff;
+  outline: none;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Iconos de navegación */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.badge {
+  position: relative;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Menú desplegable del perfil */
+.profile {
+  position: relative;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #555;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+  margin: 20px auto;
+  background-color: #1D2224;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Imagen de Portada */
+.cover-photo img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Perfil de Usuario */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-image img {
+  width: 150px; /* Ajustar tamaño */
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -100px;
+  margin-bottom: 30px;
+}
+
+/* Ajustes de la sección de acciones */
+.profile-actions {
+  flex-grow: 1;
+  color: #1D2224;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 180px;
+  right: 20px;
+}
+
+.profile-details {
+  flex-direction: column;
+  margin-left: 250px;
+  gap: 20px;
+}
+
+.profile-details h2 {
+  font-size: 30px;
+  color: #28BBDA;
+}
+
+.profile-details .category {
+  font-size: 20px;
+  color: #777;
+}
+
+.profile-details .followers {
+  font-size: 16px;
+  color: white;
+}
+
+/* Botones de acción en perfil */
+.profile-actions button {
+  background-color: #28BBDA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-actions button.follow {
+  background-color: white;
+  color: #28BBDA;
+}
+
+/* Secciones */
+.sections {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+.sections p {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #28BBDA;
+  cursor: pointer;
+  transition: border-top-color 0.3s;
+}
+
+.triangle:hover {
+  border-top-color: #282828;
+}
+
+/* Contenedor de cajas (izquierda) */
+.container2 {
+  background-color: #24292c;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile-container2-left {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.box {
+  background-color: #1D2224;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 145, 255, 0.1);
+  margin-top: 20px;
+}
+
+.box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Botones sociales */
+.social-buttons a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  background-color: #00bfff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.social-buttons .social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Botones de acceso rápido */
+.shortcut-buttons button {
+  display: flex;
+  align-items: center;
+  background: #1D2224;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.shortcut-buttons .shortcut-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.shortcut-buttons button:hover {
+  background-color: #007acc;
+}
+
+/* Actividades recientes */
+.activity-list p {
+  font-size: 14px;
+  color: white;
+  margin: 5px 0;
+}
+
+/* Publicaciones (derecha) */
+.posts-container2 {
+  flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;  /* Centra el contenido dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor de publicaciones */
+    width: 100%; /
+}
+
+.post {
+  background-color: #1D2224;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(33, 157, 220, 0.1);
+    width: 50%; /* Ajusta el ancho de las publicaciones */
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-header h4 {
+  font-size: 18px;
+  color: white;
+}
+
+.post-text {
+  width: 90%;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #24292C;
+  background-color: #24292C;
+  resize: none;
+}
+
+/* Opciones de publicaciones */
+.post-options {
+  display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center; 
+}
+
+.option {
+  padding: 8px 16px;
+  background-color: #1D2224;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.option:hover {
+  background-color: #333;
+}
+
+/* Botón para postear */
+.post-button {
+  background-color: #28BBDA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}

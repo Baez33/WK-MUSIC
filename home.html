@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/1.png" alt="WK">
+        </div>
+
+        <!-- Contenedor de búsqueda -->
+        <div class="search-container">
+            <input type="text" placeholder="Search for people, samples and more..." class="search-bar">
+            <button class="search-button">
+                <img src="img/Busqueda.png" alt="Busqueda">
+            </button>
+        </div>
+
+        <!-- Iconos de navegación -->
+        <div class="icons">
+            <div class="icon"><img src="img/Marketplace.png" alt="Marketplace"></div>
+            <div class="icon"><img src="img/home.png" alt="Home"></div>
+            <div class="icon" onclick="showNotifications()">
+                <img src="img/bell.png" alt="Notificaciones">
+                <span id="notificationBadge" class="badge"></span>
+            </div>
+            <div class="icon" onclick="showComments()">
+                <img src="img/message.png" alt="Mensajes">
+                <span id="commentBadge" class="badge"></span>
+            </div>
+            <div class="icon"><img src="img/global.png" alt="Global"></div>
+            <div class="profile">
+                <img src="img/imgperfil.png" alt="Perfil" class="profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">Mi Perfil</a>
+                    <a href="#">Configuración</a>
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- Lista de notificaciones -->
+        <div id="notificationList" class="notification-list"></div>
+
+        <!-- Lista de comentarios -->
+        <div id="commentList" class="notification-list"></div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Sidebar izquierda -->
+        <div class="sidebar">
+            <!-- Atajos -->
+            <div class="shortcuts">
+                <h2>Shortcuts</h2>
+                <ul>
+                    <li><a href="news-feed"><img src="img/cloud.png" alt="News feed icon"> News feed</a></li>
+                    <li><a href="my-page" class="disabled"><img src="img/page.png" alt="My Page icon"> My Page</a></li>
+                    <li><a href="friends"><img src="img/user.png" alt="user"> Friends</a></li>
+                    <li><a href="songs"><img src="img/music.png" alt="Songs icon"> Songs</a></li>
+                    <li><a href="videos"><img src="img/film.png" alt="Videos icon"> Videos</a></li>
+                    <li><a href="messages"><img src="img/mail.png" alt="Messages icon"> Messages</a></li>
+                    <li><a href="notifications"><img src="img/notificaciones.png" alt="Notifications icon"> Notifications</a></li>
+                </ul>
+            </div>
+            <div class="separator"></div>
+
+            <!-- Actividad reciente -->
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <ul>
+                    <li>
+                        <span class="time">10 minutes ago</span>
+                        <p>Commented on Video posted by <a href="#">ElChilito09</a>.</p>
+                    </li>
+                    <li>
+                        <span class="time">5 hours ago</span>
+                        <p>Liked a Publication by <a href="#">Trusin In Drugs</a>.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contenido de la publicación -->
+        <div class="post-container">
+            <div class="post-header">
+                <img src="img/tilin.png" alt="User Avatar" class="avatar">
+                <div>
+                    <h3>Tilin Insano 777</h3>
+                    <p>Publicado hace 1 hora</p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>¡Mi nueva canción está disponible en Spotify! 🎵</p>
+                <img src="img/publicacion.png" alt="Imagen del post" class="post-image">
+            </div>
+            <div class="interaction-buttons">
+                <button id="like-btn" onclick="likePost()">
+                    <img src="img/like.png" alt="Like">
+                    <span id="like-count">0</span>
+                </button>
+                <button id="comment-btn" onclick="commentPost()">
+                    <img src="img/comentarios.png" alt="Comment">
+                </button>
+                <button id="view-btn" onclick="viewPost()">
+                    <img src="img/views.png" alt="Views">
+                    <span id="view-count">0</span>
+                </button>
+                <button id="share-btn" onclick="sharePost()">
+                    <img src="img/compartir.png" alt="Share">
+                </button>
+                <div id="comment-box" class="comment-box" style="display:none;">
+                    <textarea id="comment-input" placeholder="Escribe tu comentario..."></textarea>
+                    <button id="submit-comment" onclick="submitComment()">Enviar</button>
+                </div>
+                <!-- Lista de comentarios -->
+                <div id="comment-list" class="comment-list"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar derecha --> 
+            <div class="right-sidebar"> 
+                <div class="anuncio">
+                    <img src="img/anuncio.png" alt="anuncio">
+                </div>
+             <div class="search-friends-section">
+                <h3>Search Friends</h3>
+                <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            <ul class="friends-list">
+                <li><img src="img/amigo1.png" alt="Friend 1" class="friend-img"> Roier</li>
+                <li><img src="img/amigo2.png" alt="Friend 2" class="friend-img"> Mariana</li>
+                <li><img src="img/amigo3.png" alt="Friend 3" class="friend-img"> Aldo</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

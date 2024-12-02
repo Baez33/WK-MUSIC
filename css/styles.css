@@ -1,0 +1,395 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #121212; 
+    color: #ffffff;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1e1e1e; /* Fondo del header */
+    border-bottom: 1px solid #333; /* Línea de separación */
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 5px 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-bar {
+    flex: 1;
+    border: none;
+    background: none;
+    color: #fff;
+    outline: none;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Iconos de navegación */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre iconos */
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.badge {
+    position: relative;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Menú desplegable del perfil */
+.profile {
+    position: relative;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #555;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+}
+
+/* Mostrar menú desplegable al hacer hover */
+.profile:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Sidebar Izquierda */
+.sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar ul li a {
+    color: white; /* Cambia este valor por el color que prefieras */
+    text-decoration: none; /* Elimina subrayados si los hubiera */
+    font-size: 14px; /* Ajusta el tamaño si lo necesitas */
+    transition: color 0.3s; /* Añade una transición suave al color */
+}
+
+.sidebar ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.recent-activity li p a  {
+    color: #28BBDA; /* Cambia este valor al color que prefieras */
+    text-decoration: none; /* Elimina el subrayado, si lo hay */
+}
+
+.recent-activity a:hover {
+    color: #2896da; /* Cambia el color cuando pasas el ratón sobre el enlace */
+}
+
+.separator {
+    margin: 15px 0;
+    border-bottom: 1px solid #1f61db;
+}
+
+/* Post Principal */
+.post-container {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #555;
+}
+
+.post-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.post-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.interaction-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.interaction-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Estilo para la caja de comentarios */
+.comment-box {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.comment-box textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: white;
+    resize: none;
+    height: 50px;
+}
+
+.comment-box button {
+    background-color: #2896da;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.comment-box button:hover {
+    background-color: #1f61db;
+}
+
+/* Estilo para los comentarios */
+.comment-list {
+    margin-top: 15px;
+}
+
+.comment {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.comment .author {
+    font-weight: bold;
+    color: #2896da;
+}
+
+.comment .text {
+    margin-top: 5px;
+    color: #fff;
+}
+
+/* Sidebar Derecha */
+.right-sidebar {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.anuncio{
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-bottom: 15px;
+}
+.search-friends-section {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #fff;
+    outline: none;
+}
+
+.friends-list {
+    list-style: none;
+    padding: 0;
+}
+
+.friends-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.friend-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .sidebar, .right-sidebar {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .icons {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sidebar, .right-sidebar {
+        width: 100%;
+    }
+
+    .post-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .search-bar {
+        font-size: 12px;
+    }
+
+    .icons .icon img {
+        width: 20px;
+        height: 20px;
+    }
+}

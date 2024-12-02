@@ -1,0 +1,171 @@
+/* Estilo para la pantalla de carga */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #fff;
+}
+
+.logo {
+    max-width: 150px; 
+    margin-bottom: 20px; 
+}
+
+#loading-screen {
+    text-align: center;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos generales para Login y Register */
+.auth-image {
+    max-width: 200px; 
+    margin: 0 auto 15px; 
+    display: block; 
+}
+
+.auth-container {
+    background-color: #24292C;
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: slide-up 0.5s ease-out;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Animación de deslizamiento hacia arriba */
+@keyframes slide-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    max-width: 120px;
+    margin-bottom: 10px;
+    animation: slide-up 0.5s ease-out;
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+/* Estilos de los campos de texto */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo para los labels */
+label {
+    display: block; 
+    margin-bottom: 10px; 
+    font-size: 20px; 
+    color: #fff; 
+    text-align: left;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos de los enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de los iconos de vinculación */
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 15px; 
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 25px;
+    background-color: #333;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    background-color: #3498db;
+}
+
+.social-icons i {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .auth-container {
+        padding: 30px;
+    }
+    .logo {
+        max-width: 100px;
+    }
+}
+
+  

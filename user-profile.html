@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/user-profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/1.png" alt="WK">
+        </div>
+
+        <!-- Contenedor de búsqueda -->
+        <div class="search-container">
+            <input type="text" placeholder="Search for people, samples and more..." class="search-bar">
+            <button class="search-button">
+                <img src="img/Busqueda.png" alt="Busqueda">
+            </button>
+        </div>
+
+        <!-- Iconos de navegación -->
+        <div class="icons">
+            <div class="icon"><img src="img/Marketplace.png" alt="Marketplace"></div>
+            <div class="icon"><a href="http://127.0.0.1:5500/home.html"><img src="img/home.png" alt="Home"></div></a>
+            <div class="icon" onclick="showNotifications()">
+                <img src="img/bell.png" alt="Notificaciones">
+                <span id="notificationBadge" class="badge">0</span>
+            </div>
+            <div class="icon" onclick="showComments()">
+                <img src="img/message.png" alt="Mensajes">
+                <span id="commentBadge" class="badge">0</span>
+            </div>
+            <div class="icon"><img src="img/global.png" alt="Global"></div>
+            <div class="profile">
+                <img src="img/imgperfil.png" alt="Perfil" class="profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">Mi Perfil</a>
+                    <a href="#">Configuración</a>
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="profile-container">
+        <!-- Imagen de portada -->
+        <div class="img/user-profile/cover-photo">
+            <img src="img/user-profile/fondo.png" alt="Imagen de portada">
+        </div>
+
+        <!-- Contenedor del perfil -->
+        <div class="profile-info">
+            <div class="profile-image">
+                <img src="img/user-profile/perfil2.png" alt="Foto de perfil">
+            </div>
+            <div class="profile-details">
+                <h2>Walker 412</h2>
+                <p class="category">Músico</p>
+                <p class="followers">151 Seguidores</p>
+            </div>
+            <div class="profile-actions">
+                <button class="add-friend">Add Friend</button>
+                <button class="follow">Follow</button>
+            </div>
+        </div>
+
+        <!-- Secciones del perfil -->
+        <div class="sections">
+            <div class="section">
+                <p>Published</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="section">
+                <p>Photos</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="section">
+                <p>Videos</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="section">
+                <p>Audios</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="section">
+                <p>About</p>
+                <div class="triangle"></div>
+            </div>
+        </div>
+
+        <!-- Nuevo contenedor para las tres secciones -->
+        <div class="main-content-container">
+            <div class="container2">
+                <!-- Columna de Social Links -->
+                <div class="profile-container2-left">
+                    <div class="box socials">
+                        <h3>Socials</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                            <a href="https://www.soundcloud.com" target="_blank">SoundCloud</a>
+                            <a href="https://www.spotify.com" target="_blank">Spotify</a>
+                        </div>
+                    </div>
+
+                    <!-- Columna de Shortcuts -->
+                    <div class="box shortcuts">
+                        <h3>Shortcuts</h3>
+                        <div class="shortcut-buttons">
+                            <button class="shortcut">
+                                <img src="img/user-profile/cloud.png" alt="New Feed" class="shortcut-icon"> New Feed
+                            </button>
+                            <button class="shortcut">
+                                <img src="img/user-profile/layout.png" alt="My Page" class="shortcut-icon"> My Page
+                            </button>
+                            <button class="shortcut">
+                                <img src="img/user-profile/user.png" alt="Friends" class="shortcut-icon"> Friends
+                            </button>
+                            <button class="shortcut">
+                                <img src="img/user-profile/music.png" alt="Song" class="shortcut-icon"> Song
+                            </button>
+                            <button class="shortcut">
+                                <img src="img/user-profile/film.png" alt="Videos" class="shortcut-icon"> Videos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Columna de Recent Activity -->
+                    <div class="box recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <p>Liked a song: "Song Title"</p>
+                            <p>Commented on a video: "Video Title"</p>
+                            <p>Followed a user: "Username"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna central de Publicaciones -->
+                <div class="posts-container2">
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="img/user-profile/perfil.png" alt="Icono de perfil" class="post-profile-icon" />
+                            <h4>Walker 412</h4>
+                        </div>
+                        <textarea class="post-text" placeholder="Write something..."></textarea>
+                        <div class="post-options">
+                            <button class="option music"><img src="img/user-profile/music.png" alt=""></button>
+                            <button class="option photos"><img src="img/user-profile/image.png" alt=""></button>
+                            <button class="option camera"><img src="img/user-profile/camera.png" alt=""></button>
+                            <button class="option video"><img src="img/user-profile/video.png" alt=""></button>
+                            <button class="post-button">Post</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Anuncio y Amigos -->
+                <div class="profile-container2-right">
+                    <div class="ad-box">
+                        <img src="img/user-profile/anuncio.png" alt="Anuncio" class="ad-image">
+                    </div>
+
+                    <div class="friends-list">
+                        <div class="friends-box">
+                            <div class="search-friends">
+                                <input type="text" placeholder="Buscar amigos..." class="search-input">
+                            </div>
+                            <div class="friend">
+                                <img src="img/user-profile/miabuelo.png" alt="Amigo 1" class="friend-image">
+                                <p class="friend-name">Amigo 1</p>
+                            </div>
+                            <div class="friend">
+                                <img src="img/user-profile/sami.png" alt="Amigo 2" class="friend-image">
+                                <p class="friend-name">Amigo 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
