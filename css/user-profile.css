@@ -1,13 +1,11 @@
 /* General Reset */
-* {
+body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: Arial, sans-serif;
-  background-color: #24292C;
+  background-color: #121212; 
+  color: #ffffff;
 }
 
 /* Header */
@@ -16,8 +14,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #333;
+  background-color: #1e1e1e; /* Fondo del header */
+  border-bottom: 1px solid #333; /* Línea de separación */
 }
 
 /* Logo */
@@ -63,7 +61,7 @@ body {
 .icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Espaciado entre iconos */
 }
 
 .icon img {
@@ -114,21 +112,24 @@ body {
   text-decoration: none;
   display: block;
   padding: 8px 15px;
-  transition: background 0.3s;
+  transition:  0.3s;
 }
 
 .dropdown-menu a:hover {
   background-color: #333;
 }
 
-/* Profile Container */
-.profile-container {
-  margin: 20px auto;
-  background-color: #1D2224;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
+/* Mostrar menú desplegable al hacer hover */
+.profile:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
 }
 
 /* Imagen de Portada */
@@ -153,7 +154,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   position: relative;
   top: -100px;
-  margin-bottom: 30px;
+  margin-bottom: -100px;
 }
 
 /* Ajustes de la sección de acciones */
@@ -162,7 +163,7 @@ body {
   color: #1D2224;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   position: absolute;
   top: 180px;
   right: 20px;
@@ -170,7 +171,7 @@ body {
 
 .profile-details {
   flex-direction: column;
-  margin-left: 250px;
+  margin-left: 11px;
   gap: 20px;
 }
 
@@ -233,171 +234,322 @@ body {
   border-top-color: #282828;
 }
 
-/* Contenedor de cajas (izquierda) */
-.container2 {
-  background-color: #24292c;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.profile-container2-left {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding-right: 20px;
-  position: relative;
-}
-
-.box {
-  background-color: #1D2224;
-  padding: 20px;
+/* Sidebar Izquierda */
+.sidebar {
+  width: 20%;
+  background-color: #1e1e1e;
+  padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 145, 255, 0.1);
-  margin-top: 20px;
 }
 
-.box h3 {
+.sidebar h2 {
   font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Botones sociales */
-.social-buttons a {
-  display: flex;
-  align-items: center;
   margin-bottom: 10px;
-  text-decoration: none;
-  color: white;
-  justify-content: center;
-  background-color: #00bfff;
-  border-radius: 5px;
-  padding: 5px;
 }
 
-.social-buttons .social-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Botones de acceso rápido */
-.shortcut-buttons button {
-  display: flex;
-  align-items: center;
-  background: #1D2224;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.shortcut-buttons .shortcut-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.shortcut-buttons button:hover {
-  background-color: #007acc;
-}
-
-/* Actividades recientes */
-.activity-list p {
-  font-size: 14px;
-  color: white;
-  margin: 5px 0;
-}
-
-/* Publicaciones (derecha) */
-.posts-container2 {
-  flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;  /* Centra el contenido dentro del contenedor */
-    margin: 0 auto; /* Centra el contenedor de publicaciones */
-    width: 100%; /
-}
-
-.post {
-  background-color: #1D2224;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(33, 157, 220, 0.1);
-    width: 50%; /* Ajusta el ancho de las publicaciones */
-    height: auto;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.post-header {
+.sidebar ul li {
+  margin: 10px 0;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.post-profile-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
+.sidebar ul li a {
+  color: white; /* Cambia este valor por el color que prefieras */
+  text-decoration: none; /* Elimina subrayados si los hubiera */
+  font-size: 14px; /* Ajusta el tamaño si lo necesitas */
+  transition: color 0.3s; /* Añade una transición suave al color */
 }
 
-.post-header h4 {
-  font-size: 18px;
-  color: white;
+.sidebar ul li img {
+  width: 20px;
+  height: 20px;
 }
 
-.post-text {
-  width: 90%;
-  height: 80px;
-  padding: 10px;
-  margin-top: 10px;
+.recent-activity li p a  {
+  color: #28BBDA; /* Cambia este valor al color que prefieras */
+  text-decoration: none; /* Elimina el subrayado, si lo hay */
+}
+
+.recent-activity a:hover {
+  color: #2896da; /* Cambia el color cuando pasas el ratón sobre el enlace */
+}
+
+.separator {
+  margin: 15px 0;
+  border-bottom: 1px solid #1f61db;
+}
+
+/* Post Principal */
+/* Estilos básicos para la publicación */
+.post-container {
+  width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #2C2C2C;
   border-radius: 10px;
-  border: 1px solid #24292C;
-  background-color: #24292C;
-  resize: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Opciones de publicaciones */
-.post-options {
+.post-header {
   display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    justify-content: center; 
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.option {
-  padding: 8px 16px;
-  background-color: #1D2224;
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+h3 {
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 20px;
+}
+
+p {
+  color: #888;
   font-size: 14px;
 }
 
-.option:hover {
-  background-color: #333;
+/* Estilo para el contenido de la publicación */
+textarea {
+  width: 85%;
+  padding: 15px;
+  background-color: #282828;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 10px;
+  resize: none;
+  font-size: 14px;
 }
 
-/* Botón para postear */
-.post-button {
-  background-color: #28BBDA;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* Estilo para los íconos de medios */
+.media-inputs {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
 
+.media-icon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.media-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.media-icon img:hover {
+  transform: scale(1.1);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #28BBDA;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+button:hover {
+  background-color: #1a9dbe;
+}
+
+/* Estilos para la lista de publicaciones */
+.post-list {
+  margin-top: 30px;
+}
+
+.post-item {
+  background-color: #1D2224;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-item img {
+  width: 10%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.post-image {
+  width: 1000%;
+}
+
+.post-content p {
+  font-size: 30px;
+}
+
+.post-item .post-content {
+  color: white;
+}
+
+.post-item .post-header h3 {
+  color: #28BBDA;
+  font-size: 18px;
+}
+
+.post-item .post-header p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* Ajustes para media */
+@media (max-width: 768px) {
+  .post-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .media-inputs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .media-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+/* Eliminar el borde azul de los inputs de archivo */
+input[type="file"] {
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: none; /* Ocultar el botón predeterminado de archivo */
+}
+
+input[type="file"]:focus {
+  outline: none; /* Eliminar foco si es necesario */
+}
+
+/* Sidebar Derecha */
+.right-sidebar {
+  width: 20%;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.anuncio{
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  margin-bottom: 15px;
+}
+.search-friends-section {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #fff;
+  outline: none;
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friends-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.friend-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .sidebar, .right-sidebar {
+      width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .search-container {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .icons {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+  }
+
+  .main-container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .sidebar, .right-sidebar {
+      width: 100%;
+  }
+
+  .post-container {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+      padding: 10px 10px;
+  }
+
+  .logo img {
+      height: 40px;
+  }
+
+  .search-bar {
+      font-size: 12px;
+  }
+
+  .icons .icon img {
+      width: 20px;
+      height: 20px;
+  }
 }

@@ -105,7 +105,7 @@
                     <img src="img/like.png" alt="Like">
                     <span id="like-count">0</span>
                 </button>
-                <button id="comment-btn" onclick="commentPost()">
+                <button id="comment-btn" onclick="toggleCommentBox(this)">
                     <img src="img/comentarios.png" alt="Comment">
                 </button>
                 <button id="view-btn" onclick="viewPost()">
@@ -115,7 +115,7 @@
                 <button id="share-btn" onclick="sharePost()">
                     <img src="img/compartir.png" alt="Share">
                 </button>
-                <div id="comment-box" class="comment-box" style="display:none;">
+                <div id="comment-box" class="comment-section" style="display:none;">
                     <textarea id="comment-input" placeholder="Escribe tu comentario..."></textarea>
                     <button id="submit-comment" onclick="submitComment()">Enviar</button>
                 </div>
